@@ -1,0 +1,1257 @@
+/* ==========================================
+   CUSTOM PROPERTIES
+   Clinica Valdemir Neto — Dark Mode Premium
+   Fontes: DM Serif Display + DM Sans
+   ========================================== */
+
+:root {
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  --color-bg: #0B1121;
+  --color-bg-elevated: #111B2E;
+  --color-text: #F8F8F8;
+  --color-text-muted: #8A94A6;
+  --color-primary: #C8A461;
+  --color-primary-hover: #D4B77A;
+  --color-border: #1E2A3F;
+  --color-error: #ef4444;
+  --color-success: #10b981;
+
+  --section-py: clamp(4rem, 10vw, 8rem);
+  --container-px: clamp(1.25rem, 5vw, 2rem);
+  --container-max: 1200px;
+}
+
+/* ==========================================
+   RESET
+   ========================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+blockquote {
+  margin: 0;
+}
+
+/* ==========================================
+   LAYOUT
+   ========================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-px);
+  padding-right: var(--container-px);
+}
+
+.section {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+  contain: layout paint;
+}
+
+/* ==========================================
+   SECAO 1: HERO
+   Split Assimetrico 60/40
+   Headline >150px | Dark Mode | Hover Lift
+   ========================================== */
+
+.hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.hero__inner {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-px);
+  padding-right: var(--container-px);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero__content {
+  padding-top: clamp(6rem, 15vh, 10rem);
+  padding-bottom: clamp(3rem, 8vh, 6rem);
+}
+
+.hero__tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.hero__tag::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1.25rem;
+  height: 1px;
+  background: var(--color-primary);
+}
+
+.hero__headline {
+  font-size: clamp(2.75rem, 8vw, 5.5rem);
+  line-height: 1.05;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero__headline em {
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.hero__sub {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+.hero__cta {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background: var(--color-primary);
+  padding: 1.125rem 2.5rem;
+  min-height: 48px;
+  border-radius: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+}
+
+.hero__cta:hover {
+  transform: translateY(-3px);
+  background: var(--color-primary-hover);
+  box-shadow: 0 8px 30px rgba(200, 164, 97, 0.25);
+}
+
+.hero__cta:active {
+  transform: translateY(-1px);
+}
+
+.hero__microcopy {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 1rem;
+}
+
+/* Visual — foto Dr. Valdemir */
+.hero__visual {
+  position: relative;
+  display: none;
+  height: 100%;
+  min-height: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__img {
+  width: clamp(280px, 22vw, 380px);
+  height: clamp(280px, 22vw, 380px);
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 2px solid rgba(200, 164, 97, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.hero__img-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 164, 97, 0.12), transparent 70%);
+  z-index: 0;
+  animation: heroGlow 6s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+}
+
+@media (min-width: 768px) {
+  .hero__inner {
+    grid-template-columns: 60% 40%;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .hero__content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .hero__visual {
+    display: flex;
+  }
+
+  .hero__microcopy {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__headline {
+    font-size: clamp(3.5rem, 5.5vw, 5rem);
+  }
+}
+
+/* ==========================================
+   SECAO 2: O PROBLEMA
+   Progressive Reveal | Stagger | Container Narrow
+   ========================================== */
+
+.problema {
+  background: var(--color-bg-elevated);
+}
+
+.problema__container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-left: var(--container-px);
+  padding-right: var(--container-px);
+}
+
+.problema__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.problema__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: var(--color-text);
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.problema__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.problema__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.problema__marker {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0.6;
+}
+
+.problema__closing {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--color-text);
+  border-left: 2px solid var(--color-primary);
+  padding-left: 1.5rem;
+}
+
+/* ==========================================
+   SECAO 3: A SOLUCAO
+   Split Vertical com Overlap
+   Texto com Gradiente | Sticky Element
+   ========================================== */
+
+.solucao {
+  background: var(--color-bg);
+}
+
+.solucao__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.solucao__visual {
+  width: clamp(240px, 50vw, 340px);
+  height: clamp(240px, 50vw, 340px);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 2px solid rgba(200, 164, 97, 0.2);
+}
+
+.solucao__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+}
+
+.solucao__title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.15;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #F8F8F8 0%, #C8A461 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.solucao__text {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.solucao__text--emphasis {
+  color: var(--color-text);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .solucao__inner {
+    grid-template-columns: 45% 55%;
+  }
+
+  .solucao__visual {
+    width: clamp(280px, 20vw, 380px);
+    height: clamp(280px, 20vw, 380px);
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+}
+
+/* ==========================================
+   SECAO 4: ESPECIALIDADES
+   Bento Box | Hover Reveal | Selective Color
+   ========================================== */
+
+.especialidades {
+  background: var(--color-bg-elevated);
+}
+
+.especialidades__header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vw, 4rem);
+}
+
+.especialidades__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.especialidades__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: var(--color-text);
+}
+
+.especialidades__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.especialidades__card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.especialidades__card--destaque {
+  min-height: 240px;
+}
+
+.especialidades__card--destaque::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: clamp(1.5rem, 3vw, 2.5rem);
+  width: 40px;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+.especialidades__card:hover {
+  border-color: rgba(200, 164, 97, 0.3);
+}
+
+.especialidades__number {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: rgba(200, 164, 97, 0.2);
+}
+
+.especialidades__card-title {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.especialidades__card-title--accent {
+  color: var(--color-primary);
+}
+
+.especialidades__card-desc {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Mobile: all descriptions visible */
+@media (max-width: 767px) {
+  .especialidades__card {
+    min-height: auto;
+  }
+
+  .especialidades__card-desc {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+}
+
+/* Desktop hover reveal for non-destaque cards */
+@media (min-width: 768px) {
+  .especialidades__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .especialidades__card--span2 {
+    grid-column: span 2;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .especialidades__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .especialidades__card--span2 {
+    grid-column: span 2;
+  }
+
+  .especialidades__card--full {
+    grid-column: span 3;
+    max-width: 400px;
+  }
+}
+
+/* ==========================================
+   SECAO 5: POR QUE NOS
+   Floating Cards | Glassmorphism | Mouse Parallax
+   ========================================== */
+
+.porque {
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.porque__bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.porque__bg-circle--1 {
+  top: 10%;
+  left: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(200, 164, 97, 0.06), transparent);
+}
+
+.porque__bg-circle--2 {
+  bottom: 10%;
+  right: -5%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(200, 164, 97, 0.04), transparent);
+}
+
+.porque__wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.porque__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: var(--color-text);
+  line-height: 1.15;
+  max-width: 600px;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.porque__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.porque__card {
+  background: rgba(17, 27, 46, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(200, 164, 97, 0.1);
+  border-radius: 8px;
+  padding: clamp(2rem, 4vw, 3rem);
+  transition: border-color 0.3s ease, transform 0.3s ease-out;
+}
+
+.porque__card:hover {
+  border-color: rgba(200, 164, 97, 0.25);
+}
+
+.porque__card-title {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.porque__card-text {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+  .porque__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .porque__card--1 { transform: translateY(0); }
+  .porque__card--2 { transform: translateY(20px); }
+  .porque__card--3 { transform: translateY(-10px); }
+  .porque__card--4 { transform: translateY(30px); }
+}
+
+@media (min-width: 1024px) {
+  .porque__card--1,
+  .porque__card--3 {
+    animation: subtleFloat 7s ease-in-out infinite;
+  }
+
+  .porque__card--2,
+  .porque__card--4 {
+    animation: subtleFloat2 9s ease-in-out infinite 1s;
+  }
+}
+
+@keyframes subtleFloat {
+  0%, 100% { transform: translateY(var(--base-y, 0px)); }
+  50% { transform: translateY(calc(var(--base-y, 0px) - 6px)); }
+}
+
+@keyframes subtleFloat2 {
+  0%, 100% { transform: translateY(var(--base-y, 0px)); }
+  50% { transform: translateY(calc(var(--base-y, 0px) - 4px)); }
+}
+
+/* ==========================================
+   SECAO 6: COMO FUNCIONA
+   Scroll Storytelling | Counter Animation | Draw SVG
+   ========================================== */
+
+.steps {
+  background: var(--color-bg-elevated);
+}
+
+.steps__container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: var(--container-px);
+  padding-right: var(--container-px);
+}
+
+.steps__header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 7vw, 5rem);
+}
+
+.steps__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.steps__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: var(--color-text);
+}
+
+.steps__list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.steps__line {
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--color-primary), var(--color-primary), transparent);
+  opacity: 0.3;
+}
+
+.steps__line-fill {
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1.5s ease;
+}
+
+.steps.is-visible .steps__line-fill {
+  clip-path: inset(0 0 0% 0);
+}
+
+.steps__item {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: clamp(3rem, 6vw, 4rem);
+  position: relative;
+}
+
+.steps__item:last-child {
+  margin-bottom: 0;
+}
+
+.steps__number {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-elevated);
+  border: 1px solid rgba(200, 164, 97, 0.3);
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.steps__number:hover {
+  transform: scale(1.05);
+  border-color: var(--color-primary);
+}
+
+.steps__item-title {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.steps__item-text {
+  font-family: var(--font-body);
+  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+  .steps__line {
+    left: 50px;
+  }
+
+  .steps__number {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+  }
+}
+
+/* ==========================================
+   SECAO 7: DEPOIMENTOS
+   Carousel Infinite | Hover Lift | Noise Texture
+   ========================================== */
+
+.depoimentos {
+  background: var(--color-bg);
+}
+
+.depoimentos__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.depoimentos__carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.depoimentos__track {
+  display: flex;
+  gap: 1rem;
+  animation: autoScroll 30s linear infinite;
+}
+
+.depoimentos__track:hover {
+  animation-play-state: paused;
+}
+
+.depoimentos__track.is-paused {
+  animation-play-state: paused;
+}
+
+@keyframes autoScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.depoimentos__card {
+  flex-shrink: 0;
+  width: clamp(300px, 40vw, 420px);
+  background: var(--color-bg-elevated);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: clamp(2rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.depoimentos__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-color: rgba(200, 164, 97, 0.2);
+}
+
+.depoimentos__quote {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.depoimentos__quote::before {
+  content: '\201C';
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: rgba(200, 164, 97, 0.3);
+  position: absolute;
+  top: -0.5rem;
+  left: -0.25rem;
+  line-height: 1;
+}
+
+.depoimentos__quote p {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--color-text);
+  padding-left: 1.5rem;
+}
+
+.depoimentos__author {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 767px) {
+  .depoimentos__track {
+    gap: 1rem;
+  }
+
+  .depoimentos__card {
+    width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .depoimentos__track {
+    gap: 1.5rem;
+  }
+}
+
+/* ==========================================
+   SECAO 8: FAQ
+   Reveal on Demand | Clip Reveal | Asymmetric Padding
+   ========================================== */
+
+.faq {
+  background: var(--color-bg-elevated);
+}
+
+.faq__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.faq__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq__question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  min-height: 48px;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 500;
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.faq__question:hover {
+  color: var(--color-primary);
+}
+
+.faq__icon {
+  flex-shrink: 0;
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+.faq__item.is-open .faq__icon {
+  transform: rotate(45deg);
+}
+
+.faq__answer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  clip-path: inset(0 0 100% 0);
+  transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              opacity 0.3s ease,
+              clip-path 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.faq__item.is-open .faq__answer {
+  max-height: 300px;
+  opacity: 1;
+  clip-path: inset(0 0 0% 0);
+}
+
+.faq__answer p {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .faq__inner {
+    grid-template-columns: 40% 60%;
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+
+  .faq__heading {
+    position: sticky;
+    top: clamp(2rem, 5vw, 4rem);
+    align-self: start;
+  }
+
+  .faq__title {
+    margin-bottom: 0;
+  }
+
+  .faq__list {
+    padding-left: clamp(1rem, 3vw, 2rem);
+  }
+}
+
+/* ==========================================
+   LOCALIZACAO — Google Maps Embed
+   ========================================== */
+
+.localizacao {
+  background: var(--color-bg);
+}
+
+.localizacao__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.localizacao__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  color: var(--color-text);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.localizacao__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.localizacao__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.localizacao__address {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.localizacao__link {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.25rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  width: fit-content;
+}
+
+.localizacao__link:hover {
+  color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.localizacao__map {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.localizacao__map iframe {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+}
+
+@media (min-width: 768px) {
+  .localizacao__wrapper {
+    grid-template-columns: 35% 65%;
+    gap: clamp(2rem, 4vw, 4rem);
+  }
+
+  .localizacao__map iframe {
+    min-height: 400px;
+  }
+}
+
+/* ==========================================
+   SECAO 9: CTA FINAL
+   Hero Dominante | Headline Full Width | Gradiente Animado
+   ========================================== */
+
+.cta-final {
+  background: var(--color-bg);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-final__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(200, 164, 97, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 50%, rgba(200, 164, 97, 0.05) 0%, transparent 50%);
+  background-size: 200% 200%;
+  animation: ctaGradient 15s ease infinite;
+}
+
+@keyframes ctaGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.cta-final__content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.cta-final__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.cta-final__sub {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.cta-final__btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background: var(--color-primary);
+  padding: 1.125rem 2.5rem;
+  min-height: 48px;
+  border-radius: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+}
+
+.cta-final__btn:hover {
+  transform: translateY(-3px);
+  background: var(--color-primary-hover);
+  box-shadow: 0 8px 30px rgba(200, 164, 97, 0.25);
+}
+
+.cta-final__btn:active {
+  transform: translateY(-1px);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ==========================================
+   WHATSAPP FAB
+   ========================================== */
+
+.whatsapp-fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  animation: fabPulse 3s ease-in-out infinite;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-fab.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.whatsapp-fab svg {
+  width: 28px;
+  height: 28px;
+}
+
+@keyframes fabPulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); }
+  50% { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.5); }
+}
+
+/* ==========================================
+   UTILITIES
+   ========================================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
