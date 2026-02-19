@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Clínica Valdemir Neto — Implantes e Reabilitação Oral em Teresina</title>
-  <meta name="description" content="Clínica odontológica premium na Zona Leste de Teresina. Especialista em implantes, reabilitação oral e prótese com velocidade. Agende sua avaliação.">
+  <meta name="description"
+    content="Clínica odontológica premium na Zona Leste de Teresina. Especialista em implantes, reabilitação oral e prótese com velocidade. Agende sua avaliação.">
 
   <meta property="og:title" content="Clínica Valdemir Neto — Implantes e Reabilitação Oral">
-  <meta property="og:description" content="Seu sorriso novo em tempo recorde. Técnica exclusiva de prótese rápida na Zona Leste de Teresina.">
+  <meta property="og:description"
+    content="Seu sorriso novo em tempo recorde. Técnica exclusiva de prótese rápida na Zona Leste de Teresina.">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
@@ -17,16 +20,49 @@
   <!-- Fonts: DM Serif Display + DM Sans (Alto contraste) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet">
   </noscript>
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="./style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17964337089"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17964337089');
+  </script>
+
+  <!-- Event snippet for Contato conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17964337089/-cT0CKa1xPsbEMGPiPZC',
+        'value': 1.0,
+        'currency': 'BRL',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
 </head>
+
 <body>
 
   <main>
@@ -39,15 +75,19 @@
     <section class="hero">
       <div class="hero__inner">
         <div class="hero__content">
-          <img src="./images/logo.png" alt="Clínica Valdemir Neto — Reabilitação Oral e Estética" width="400" height="213" class="hero__logo">
+          <img src="./images/logo.png" alt="Clínica Valdemir Neto — Reabilitação Oral e Estética" width="400"
+            height="213" class="hero__logo">
           <h1 class="hero__headline">
             Seu sorriso novo<br>
             <em>em tempo recorde</em>
           </h1>
           <p class="hero__sub">
-            Técnica exclusiva de reabilitação oral que devolve sua confiança com velocidade, precisão e resultado natural.
+            Técnica exclusiva de reabilitação oral que devolve sua confiança com velocidade, precisão e resultado
+            natural.
           </p>
-          <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20o%20Dr.%20Valdemir%20Neto." class="hero__cta" id="heroCta" aria-label="Agendar avaliação pelo WhatsApp">
+          <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20o%20Dr.%20Valdemir%20Neto."
+            class="hero__cta" id="heroCta" aria-label="Agendar avaliação pelo WhatsApp"
+            onclick="return gtag_report_conversion(this.href);">
             Agende sua avaliação
           </a>
           <span class="hero__microcopy">Especialista em implantes e reabilitação oral</span>
@@ -55,7 +95,8 @@
         <div class="hero__visual">
           <picture>
             <source srcset="./images/valdemir.webp" type="image/webp">
-            <img src="./images/valdemir.jpg" alt="Dr. Valdemir Neto" width="800" height="800" decoding="async" class="hero__img">
+            <img src="./images/valdemir.jpg" alt="Dr. Valdemir Neto" width="800" height="800" decoding="async"
+              class="hero__img">
           </picture>
           <div class="hero__img-glow" aria-hidden="true"></div>
         </div>
@@ -107,7 +148,8 @@
         <div class="solucao__visual" data-aos="fade-right">
           <picture>
             <source srcset="./images/valdemir.webp" type="image/webp">
-            <img src="./images/valdemir.jpg" alt="Dr. Valdemir Neto, especialista em implantes e reabilitação oral" width="800" height="800" loading="lazy" class="solucao__img">
+            <img src="./images/valdemir.jpg" alt="Dr. Valdemir Neto, especialista em implantes e reabilitação oral"
+              width="800" height="800" loading="lazy" class="solucao__img">
           </picture>
         </div>
         <div class="solucao__content">
@@ -115,10 +157,13 @@
             Reabilitação oral com velocidade que só o Dr. Valdemir entrega
           </h2>
           <p class="solucao__text" data-aos="fade-up" data-aos-delay="200">
-            O Dr. Valdemir Neto desenvolveu uma técnica própria de prótese rápida que reduz drasticamente o tempo entre a consulta e o resultado final. Enquanto outros profissionais levam semanas, aqui você sai com seu sorriso em uma fração do tempo.
+            O Dr. Valdemir Neto desenvolveu uma técnica própria de prótese rápida que reduz drasticamente o tempo entre
+            a consulta e o resultado final. Enquanto outros profissionais levam semanas, aqui você sai com seu sorriso
+            em uma fração do tempo.
           </p>
           <p class="solucao__text solucao__text--emphasis" data-aos="fade-up" data-aos-delay="300">
-            Isso não é pressa. É domínio técnico. São anos de especialização em implantodontia e reabilitação oral traduzidos em um processo mais inteligente e eficiente.
+            Isso não é pressa. É domínio técnico. São anos de especialização em implantodontia e reabilitação oral
+            traduzidos em um processo mais inteligente e eficiente.
           </p>
         </div>
       </div>
@@ -136,35 +181,42 @@
           <h2 class="especialidades__title" data-aos="fade-up">Tratamento completo em um só lugar</h2>
         </div>
         <div class="especialidades__grid">
-          <div class="especialidades__card especialidades__card--destaque especialidades__card--span2" data-aos="fade-up">
+          <div class="especialidades__card especialidades__card--destaque especialidades__card--span2"
+            data-aos="fade-up">
             <span class="especialidades__number">01</span>
             <h3 class="especialidades__card-title especialidades__card-title--accent">Implantes dentários</h3>
-            <p class="especialidades__card-desc especialidades__card-desc--visible">Solução definitiva para dentes perdidos. Técnicas modernas com recuperação rápida e resultado natural.</p>
+            <p class="especialidades__card-desc especialidades__card-desc--visible">Solução definitiva para dentes
+              perdidos. Técnicas modernas com recuperação rápida e resultado natural.</p>
           </div>
           <div class="especialidades__card especialidades__card--destaque" data-aos="fade-up" data-aos-delay="100">
             <span class="especialidades__number">02</span>
             <h3 class="especialidades__card-title especialidades__card-title--accent">Reabilitação oral completa</h3>
-            <p class="especialidades__card-desc especialidades__card-desc--visible">Protocolos avançados para quem precisa reconstruir a função e a estética de toda a arcada.</p>
+            <p class="especialidades__card-desc especialidades__card-desc--visible">Protocolos avançados para quem
+              precisa reconstruir a função e a estética de toda a arcada.</p>
           </div>
           <div class="especialidades__card especialidades__card--destaque" data-aos="fade-up" data-aos-delay="150">
             <span class="especialidades__number">03</span>
             <h3 class="especialidades__card-title especialidades__card-title--accent">Prótese com velocidade</h3>
-            <p class="especialidades__card-desc especialidades__card-desc--visible">A técnica que diferencia o Dr. Valdemir. Menos tempo de espera, mais previsibilidade no resultado.</p>
+            <p class="especialidades__card-desc especialidades__card-desc--visible">A técnica que diferencia o Dr.
+              Valdemir. Menos tempo de espera, mais previsibilidade no resultado.</p>
           </div>
           <div class="especialidades__card" data-aos="fade-up" data-aos-delay="200">
             <span class="especialidades__number">04</span>
             <h3 class="especialidades__card-title">Estética dental</h3>
-            <p class="especialidades__card-desc">Lentes de contato dental, clareamento e harmonização para quem quer elevar o sorriso ao próximo nível.</p>
+            <p class="especialidades__card-desc">Lentes de contato dental, clareamento e harmonização para quem quer
+              elevar o sorriso ao próximo nível.</p>
           </div>
           <div class="especialidades__card" data-aos="fade-up" data-aos-delay="250">
             <span class="especialidades__number">05</span>
             <h3 class="especialidades__card-title">Ortodontia</h3>
-            <p class="especialidades__card-desc">Alinhadores e aparelhos estéticos para correção de mordida e alinhamento dos dentes.</p>
+            <p class="especialidades__card-desc">Alinhadores e aparelhos estéticos para correção de mordida e
+              alinhamento dos dentes.</p>
           </div>
           <div class="especialidades__card especialidades__card--full" data-aos="fade-up" data-aos-delay="300">
             <span class="especialidades__number">06</span>
             <h3 class="especialidades__card-title">Periodontia</h3>
-            <p class="especialidades__card-desc">Cuidado com gengivas e estruturas de suporte. Base essencial para implantes e longevidade dos dentes.</p>
+            <p class="especialidades__card-desc">Cuidado com gengivas e estruturas de suporte. Base essencial para
+              implantes e longevidade dos dentes.</p>
           </div>
         </div>
       </div>
@@ -185,19 +237,23 @@
         <div class="porque__grid" id="porqueGrid">
           <div class="porque__card porque__card--1" data-aos="fade-up" data-parallax="10">
             <h3 class="porque__card-title">Técnica exclusiva</h3>
-            <p class="porque__card-text">Prótese em tempo recorde. Você não encontra esse nível de agilidade em outro lugar de Teresina.</p>
+            <p class="porque__card-text">Prótese em tempo recorde. Você não encontra esse nível de agilidade em outro
+              lugar de Teresina.</p>
           </div>
           <div class="porque__card porque__card--2" data-aos="fade-up" data-aos-delay="100" data-parallax="6">
             <h3 class="porque__card-title">Especialista dedicado</h3>
-            <p class="porque__card-text">Dr. Valdemir Neto é referência em implantes e reabilitação oral. Cada caso recebe atenção personalizada.</p>
+            <p class="porque__card-text">Dr. Valdemir Neto é referência em implantes e reabilitação oral. Cada caso
+              recebe atenção personalizada.</p>
           </div>
           <div class="porque__card porque__card--3" data-aos="fade-up" data-aos-delay="200" data-parallax="6">
             <h3 class="porque__card-title">Estrutura premium</h3>
-            <p class="porque__card-text">Ambiente moderno, equipamentos de última geração e conforto que você percebe desde a recepção.</p>
+            <p class="porque__card-text">Ambiente moderno, equipamentos de última geração e conforto que você percebe
+              desde a recepção.</p>
           </div>
           <div class="porque__card porque__card--4" data-aos="fade-up" data-aos-delay="300" data-parallax="10">
             <h3 class="porque__card-title">Localização privilegiada</h3>
-            <p class="porque__card-text">Av. Lindolfo Monteiro, 813 — Fátima, Zona Leste de Teresina. Coração do bairro mais nobre da cidade. Fácil acesso e estacionamento.</p>
+            <p class="porque__card-text">Av. Lindolfo Monteiro, 813 — Fátima, Zona Leste de Teresina. Coração do bairro
+              mais nobre da cidade. Fácil acesso e estacionamento.</p>
           </div>
         </div>
       </div>
@@ -222,21 +278,24 @@
             <div class="steps__number" data-count="1">0</div>
             <div class="steps__content">
               <h3 class="steps__item-title">Avaliação personalizada</h3>
-              <p class="steps__item-text">Exame clínico detalhado, radiografias e planejamento digital do seu caso. Você entende exatamente o que será feito, quanto tempo leva e quanto custa. Sem surpresas.</p>
+              <p class="steps__item-text">Exame clínico detalhado, radiografias e planejamento digital do seu caso. Você
+                entende exatamente o que será feito, quanto tempo leva e quanto custa. Sem surpresas.</p>
             </div>
           </div>
           <div class="steps__item" data-aos="fade-up" data-aos-delay="150">
             <div class="steps__number" data-count="2">0</div>
             <div class="steps__content">
               <h3 class="steps__item-title">Tratamento com agilidade</h3>
-              <p class="steps__item-text">Execução do plano com a técnica de prótese rápida do Dr. Valdemir. Menos sessões, menos desconforto, menos tempo fora da sua rotina.</p>
+              <p class="steps__item-text">Execução do plano com a técnica de prótese rápida do Dr. Valdemir. Menos
+                sessões, menos desconforto, menos tempo fora da sua rotina.</p>
             </div>
           </div>
           <div class="steps__item" data-aos="fade-up" data-aos-delay="300">
             <div class="steps__number" data-count="3">0</div>
             <div class="steps__content">
               <h3 class="steps__item-title">Resultado e acompanhamento</h3>
-              <p class="steps__item-text">Sorriso entregue com qualidade que dura. Acompanhamento pós-tratamento para garantir sua satisfação e saúde bucal a longo prazo.</p>
+              <p class="steps__item-text">Sorriso entregue com qualidade que dura. Acompanhamento pós-tratamento para
+                garantir sua satisfação e saúde bucal a longo prazo.</p>
             </div>
           </div>
         </div>
@@ -257,38 +316,44 @@
           <!-- Cards originais -->
           <div class="depoimentos__card">
             <blockquote class="depoimentos__quote">
-              <p>Eu tinha vergonha de sorrir há anos. Em poucas semanas o Dr. Valdemir resolveu o que eu achava que ia demorar meses. Mudou minha vida.</p>
+              <p>Eu tinha vergonha de sorrir há anos. Em poucas semanas o Dr. Valdemir resolveu o que eu achava que ia
+                demorar meses. Mudou minha vida.</p>
             </blockquote>
             <cite class="depoimentos__author">— Maria Clara, 42 anos</cite>
           </div>
           <div class="depoimentos__card">
             <blockquote class="depoimentos__quote">
-              <p>A estrutura da clínica é impressionante. Você sente que está em boas mãos desde o momento que entra. Fiz meus implantes e não poderia estar mais satisfeito.</p>
+              <p>A estrutura da clínica é impressionante. Você sente que está em boas mãos desde o momento que entra.
+                Fiz meus implantes e não poderia estar mais satisfeito.</p>
             </blockquote>
             <cite class="depoimentos__author">— Roberto Almeida, 55 anos</cite>
           </div>
           <div class="depoimentos__card">
             <blockquote class="depoimentos__quote">
-              <p>Procurei vários dentistas antes e nenhum me passou a mesma segurança. O Dr. Valdemir explica tudo, é rápido e o resultado ficou perfeito.</p>
+              <p>Procurei vários dentistas antes e nenhum me passou a mesma segurança. O Dr. Valdemir explica tudo, é
+                rápido e o resultado ficou perfeito.</p>
             </blockquote>
             <cite class="depoimentos__author">— Ana Beatriz, 38 anos</cite>
           </div>
           <!-- Cards duplicados para loop infinito -->
           <div class="depoimentos__card" aria-hidden="true">
             <blockquote class="depoimentos__quote">
-              <p>Eu tinha vergonha de sorrir há anos. Em poucas semanas o Dr. Valdemir resolveu o que eu achava que ia demorar meses. Mudou minha vida.</p>
+              <p>Eu tinha vergonha de sorrir há anos. Em poucas semanas o Dr. Valdemir resolveu o que eu achava que ia
+                demorar meses. Mudou minha vida.</p>
             </blockquote>
             <cite class="depoimentos__author">— Maria Clara, 42 anos</cite>
           </div>
           <div class="depoimentos__card" aria-hidden="true">
             <blockquote class="depoimentos__quote">
-              <p>A estrutura da clínica é impressionante. Você sente que está em boas mãos desde o momento que entra. Fiz meus implantes e não poderia estar mais satisfeito.</p>
+              <p>A estrutura da clínica é impressionante. Você sente que está em boas mãos desde o momento que entra.
+                Fiz meus implantes e não poderia estar mais satisfeito.</p>
             </blockquote>
             <cite class="depoimentos__author">— Roberto Almeida, 55 anos</cite>
           </div>
           <div class="depoimentos__card" aria-hidden="true">
             <blockquote class="depoimentos__quote">
-              <p>Procurei vários dentistas antes e nenhum me passou a mesma segurança. O Dr. Valdemir explica tudo, é rápido e o resultado ficou perfeito.</p>
+              <p>Procurei vários dentistas antes e nenhum me passou a mesma segurança. O Dr. Valdemir explica tudo, é
+                rápido e o resultado ficou perfeito.</p>
             </blockquote>
             <cite class="depoimentos__author">— Ana Beatriz, 38 anos</cite>
           </div>
@@ -313,7 +378,8 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Depende da complexidade do caso, mas com a técnica do Dr. Valdemir o processo é significativamente mais rápido que o convencional. Na avaliação inicial você recebe um cronograma preciso.</p>
+              <p>Depende da complexidade do caso, mas com a técnica do Dr. Valdemir o processo é significativamente mais
+                rápido que o convencional. Na avaliação inicial você recebe um cronograma preciso.</p>
             </div>
           </div>
           <div class="faq__item" data-aos="fade-up" data-aos-delay="50">
@@ -322,7 +388,8 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Os procedimentos são feitos com anestesia local e técnicas minimamente invasivas. A maioria dos pacientes relata muito menos desconforto do que esperava.</p>
+              <p>Os procedimentos são feitos com anestesia local e técnicas minimamente invasivas. A maioria dos
+                pacientes relata muito menos desconforto do que esperava.</p>
             </div>
           </div>
           <div class="faq__item" data-aos="fade-up" data-aos-delay="100">
@@ -331,7 +398,8 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Cada caso é único e o investimento depende do plano de tratamento. Agende sua avaliação gratuita para receber um orçamento personalizado sem compromisso.</p>
+              <p>Cada caso é único e o investimento depende do plano de tratamento. Agende sua avaliação gratuita para
+                receber um orçamento personalizado sem compromisso.</p>
             </div>
           </div>
           <div class="faq__item" data-aos="fade-up" data-aos-delay="150">
@@ -340,7 +408,8 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Não. A técnica de prótese rápida do Dr. Valdemir garante que você nunca fique sem dentes em nenhuma etapa do processo.</p>
+              <p>Não. A técnica de prótese rápida do Dr. Valdemir garante que você nunca fique sem dentes em nenhuma
+                etapa do processo.</p>
             </div>
           </div>
           <div class="faq__item" data-aos="fade-up" data-aos-delay="200">
@@ -349,7 +418,8 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Trabalhamos com as principais formas de pagamento e oferecemos condições facilitadas. Entre em contato para saber mais.</p>
+              <p>Trabalhamos com as principais formas de pagamento e oferecemos condições facilitadas. Entre em contato
+                para saber mais.</p>
             </div>
           </div>
           <div class="faq__item" data-aos="fade-up" data-aos-delay="250">
@@ -358,7 +428,9 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Av. Lindolfo Monteiro, 813 — Fátima, Zona Leste de Teresina. Região nobre da cidade, com fácil acesso e estacionamento. <a href="https://maps.app.goo.gl/494c7CWX38Vh5hce9?g_st=iw" target="_blank" rel="noopener">Ver no mapa</a></p>
+              <p>Av. Lindolfo Monteiro, 813 — Fátima, Zona Leste de Teresina. Região nobre da cidade, com fácil acesso e
+                estacionamento. <a href="https://maps.app.goo.gl/494c7CWX38Vh5hce9?g_st=iw" target="_blank"
+                  rel="noopener">Ver no mapa</a></p>
             </div>
           </div>
         </div>
@@ -371,14 +443,19 @@
     <section class="localizacao section">
       <div class="container">
         <p class="localizacao__eyebrow" data-aos="fade-up">Localização</p>
-        <h2 class="localizacao__title" data-aos="fade-up" data-aos-delay="50">Fácil acesso na Zona Leste de Teresina</h2>
+        <h2 class="localizacao__title" data-aos="fade-up" data-aos-delay="50">Fácil acesso na Zona Leste de Teresina
+        </h2>
         <div class="localizacao__wrapper" data-aos="fade-up" data-aos-delay="150">
           <div class="localizacao__info">
             <p class="localizacao__address">Av. Lindolfo Monteiro, 813 — Fátima<br>Teresina, Piauí</p>
-            <a href="https://maps.app.goo.gl/494c7CWX38Vh5hce9?g_st=iw" class="localizacao__link" target="_blank" rel="noopener">Abrir no Google Maps</a>
+            <a href="https://maps.app.goo.gl/494c7CWX38Vh5hce9?g_st=iw" class="localizacao__link" target="_blank"
+              rel="noopener">Abrir no Google Maps</a>
           </div>
           <div class="localizacao__map">
-            <iframe src="https://www.google.com/maps?q=Av.+Lindolfo+Monteiro,+813,+Fatima,+Teresina,+PI,+Brasil&z=16&output=embed" width="100%" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Clínica Valdemir Neto no Google Maps"></iframe>
+            <iframe
+              src="https://www.google.com/maps?q=Av.+Lindolfo+Monteiro,+813,+Fatima,+Teresina,+PI,+Brasil&z=16&output=embed"
+              width="100%" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Localização Clínica Valdemir Neto no Google Maps"></iframe>
           </div>
         </div>
       </div>
@@ -394,9 +471,12 @@
       <div class="cta-final__content container">
         <h2 class="cta-final__title" data-aos="fade-up">Seu próximo sorriso começa com uma conversa</h2>
         <p class="cta-final__sub" data-aos="fade-up" data-aos-delay="100">
-          Agende sua avaliação com o Dr. Valdemir Neto. Sem compromisso, sem fila de espera. Atendimento exclusivo na Zona Leste de Teresina.
+          Agende sua avaliação com o Dr. Valdemir Neto. Sem compromisso, sem fila de espera. Atendimento exclusivo na
+          Zona Leste de Teresina.
         </p>
-        <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20o%20Dr.%20Valdemir%20Neto." class="cta-final__btn" data-aos="fade-up" data-aos-delay="200" aria-label="Agendar pelo WhatsApp">
+        <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20o%20Dr.%20Valdemir%20Neto."
+          class="cta-final__btn" data-aos="fade-up" data-aos-delay="200" aria-label="Agendar pelo WhatsApp"
+          onclick="return gtag_report_conversion(this.href);">
           Agendar pelo WhatsApp
         </a>
       </div>
@@ -429,20 +509,25 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__disclaimer">Resultados podem variar de acordo com cada caso. As imagens são meramente ilustrativas.</p>
+        <p class="footer__disclaimer">Resultados podem variar de acordo com cada caso. As imagens são meramente
+          ilustrativas.</p>
         <p>&copy; <span id="year"></span> Clínica Valdemir Neto. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
 
   <!-- Botão flutuante WhatsApp -->
-  <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20o%20Dr.%20Valdemir%20Neto." class="whatsapp-fab is-hidden" id="whatsappFab" aria-label="Fale conosco pelo WhatsApp" target="_blank" rel="noopener">
+  <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20o%20Dr.%20Valdemir%20Neto."
+    class="whatsapp-fab is-hidden" id="whatsappFab" aria-label="Fale conosco pelo WhatsApp" target="_blank"
+    rel="noopener" onclick="return gtag_report_conversion(this.href);">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
     </svg>
   </a>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="./script.js"></script>
 </body>
+
 </html>

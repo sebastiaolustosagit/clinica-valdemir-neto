@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Dentista em Teresina — Clínica Valdemir Neto | Estética, Clareamento e Harmonização</title>
-  <meta name="description" content="Dentista na Zona Leste de Teresina. Clareamento dental, lentes de contato, harmonização orofacial, ortodontia, limpeza e restauração. Agende sua consulta.">
+  <meta name="description"
+    content="Dentista na Zona Leste de Teresina. Clareamento dental, lentes de contato, harmonização orofacial, ortodontia, limpeza e restauração. Agende sua consulta.">
 
   <meta property="og:title" content="Dentista em Teresina — Clínica Valdemir Neto">
-  <meta property="og:description" content="Estética dental, clareamento, lentes de contato, harmonização orofacial e muito mais. Zona Leste de Teresina.">
+  <meta property="og:description"
+    content="Estética dental, clareamento, lentes de contato, harmonização orofacial e muito mais. Zona Leste de Teresina.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="">
   <meta property="og:url" content="">
@@ -17,15 +20,48 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet">
   </noscript>
 
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="./style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17964337089"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17964337089');
+  </script>
+
+  <!-- Event snippet for Contato conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17964337089/-cT0CKa1xPsbEMGPiPZC',
+        'value': 1.0,
+        'currency': 'BRL',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
 </head>
+
 <body>
 
   <main>
@@ -45,16 +81,20 @@
             O sorriso que você<br>sempre quis está <em>mais perto</em><br>do que imagina
           </h1>
           <p class="hero__sub">
-            Do clareamento à harmonização orofacial — tratamentos estéticos e preventivos com tecnologia, cuidado e resultado natural.
+            Do clareamento à harmonização orofacial — tratamentos estéticos e preventivos com tecnologia, cuidado e
+            resultado natural.
           </p>
-          <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Valdemir%20Neto." class="hero__cta" id="heroCta" aria-label="Agendar consulta pelo WhatsApp">
+          <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Valdemir%20Neto."
+            class="hero__cta" id="heroCta" aria-label="Agendar consulta pelo WhatsApp"
+            onclick="return gtag_report_conversion(this.href);">
             Agende sua consulta
           </a>
         </div>
         <div class="hero__visual">
           <picture>
             <source srcset="../images/valdemir.webp" type="image/webp">
-            <img src="../images/valdemir.jpg" alt="Dr. Valdemir Neto, cirurgião-dentista especialista" width="800" height="800" loading="eager" decoding="async" class="hero__img">
+            <img src="../images/valdemir.jpg" alt="Dr. Valdemir Neto, cirurgião-dentista especialista" width="800"
+              height="800" loading="eager" decoding="async" class="hero__img">
           </picture>
           <div class="hero__img-glow" aria-hidden="true"></div>
         </div>
@@ -69,7 +109,8 @@
     <section class="problema section">
       <div class="container">
         <p class="problema__eyebrow" data-aos="fade-up">Isso te incomoda?</p>
-        <h2 class="problema__title" data-aos="fade-up" data-aos-delay="100">Pequenos incômodos que afetam mais do que você percebe</h2>
+        <h2 class="problema__title" data-aos="fade-up" data-aos-delay="100">Pequenos incômodos que afetam mais do que
+          você percebe</h2>
       </div>
       <div class="problema__grid">
         <div class="problema__card" data-aos="fade-up" data-aos-delay="150">
@@ -106,14 +147,20 @@
         <div class="solucao__visual" data-aos="fade-up">
           <picture>
             <source srcset="../images/valdemir.webp" type="image/webp">
-            <img src="../images/valdemir.jpg" alt="Dr. Valdemir Neto, cirurgião-dentista especialista" width="800" height="800" loading="lazy" decoding="async" class="solucao__img">
+            <img src="../images/valdemir.jpg" alt="Dr. Valdemir Neto, cirurgião-dentista especialista" width="800"
+              height="800" loading="lazy" decoding="async" class="solucao__img">
           </picture>
           <div class="solucao__img-glow" aria-hidden="true"></div>
         </div>
         <div class="solucao__content">
-          <h2 class="solucao__title" data-aos="fade-up" data-aos-delay="100">Odontologia completa com foco no que importa: <em>você</em></h2>
-          <p class="solucao__text solucao__text--dropcap" data-aos="fade-up" data-aos-delay="200">Na Clínica Valdemir Neto, cada tratamento começa com uma escuta atenta. Antes de qualquer procedimento, entendemos o que te incomoda, o que você deseja e qual o melhor caminho para chegar lá — sem exageros, sem pressa.</p>
-          <p class="solucao__text solucao__text--highlight" data-aos="fade-up" data-aos-delay="300">Da limpeza preventiva ao design do sorriso, tudo é feito com a mesma dedicação: tecnologia atual, ambiente confortável e um profissional que trata cada caso como único.</p>
+          <h2 class="solucao__title" data-aos="fade-up" data-aos-delay="100">Odontologia completa com foco no que
+            importa: <em>você</em></h2>
+          <p class="solucao__text solucao__text--dropcap" data-aos="fade-up" data-aos-delay="200">Na Clínica Valdemir
+            Neto, cada tratamento começa com uma escuta atenta. Antes de qualquer procedimento, entendemos o que te
+            incomoda, o que você deseja e qual o melhor caminho para chegar lá — sem exageros, sem pressa.</p>
+          <p class="solucao__text solucao__text--highlight" data-aos="fade-up" data-aos-delay="300">Da limpeza
+            preventiva ao design do sorriso, tudo é feito com a mesma dedicação: tecnologia atual, ambiente confortável
+            e um profissional que trata cada caso como único.</p>
         </div>
       </div>
     </section>
@@ -134,38 +181,45 @@
           <div class="especialidades__badge">Mais procurado</div>
           <h3 class="especialidades__card-title">Clareamento Dental</h3>
           <p class="especialidades__card-sub">Dentes mais brancos com segurança e resultado duradouro</p>
-          <p class="especialidades__card-desc">Clareamento profissional em consultório com técnicas avançadas que respeitam o esmalte e minimizam a sensibilidade. Resultados visíveis já na primeira sessão.</p>
+          <p class="especialidades__card-desc">Clareamento profissional em consultório com técnicas avançadas que
+            respeitam o esmalte e minimizam a sensibilidade. Resultados visíveis já na primeira sessão.</p>
         </div>
         <div class="especialidades__card" data-aos="fade-up" data-aos-delay="100">
           <span class="especialidades__number" aria-hidden="true">02</span>
           <h3 class="especialidades__card-title">Lentes de Contato Dental</h3>
           <p class="especialidades__card-sub">O sorriso dos seus sonhos, lâmina por lâmina</p>
-          <p class="especialidades__card-desc">Facetas ultrafinas em porcelana que corrigem cor, forma, tamanho e alinhamento dos dentes. Planejamento digital para você visualizar o resultado antes de começar.</p>
+          <p class="especialidades__card-desc">Facetas ultrafinas em porcelana que corrigem cor, forma, tamanho e
+            alinhamento dos dentes. Planejamento digital para você visualizar o resultado antes de começar.</p>
         </div>
         <div class="especialidades__card" data-aos="fade-up" data-aos-delay="150">
           <span class="especialidades__number" aria-hidden="true">03</span>
           <div class="especialidades__badge">Tendência</div>
           <h3 class="especialidades__card-title">Harmonização Orofacial</h3>
           <p class="especialidades__card-sub">Equilíbrio e naturalidade para o seu rosto</p>
-          <p class="especialidades__card-desc">Preenchimento facial, preenchimento labial e redução de linhas de expressão que realçam sua beleza natural. Sem exageros — resultado que ninguém percebe, mas todo mundo elogia.</p>
+          <p class="especialidades__card-desc">Preenchimento facial, preenchimento labial e redução de linhas de
+            expressão que realçam sua beleza natural. Sem exageros — resultado que ninguém percebe, mas todo mundo
+            elogia.</p>
         </div>
         <div class="especialidades__card" data-aos="fade-up" data-aos-delay="200">
           <span class="especialidades__number" aria-hidden="true">04</span>
           <h3 class="especialidades__card-title">Profilaxia</h3>
           <p class="especialidades__card-sub">A base de um sorriso saudável começa aqui</p>
-          <p class="especialidades__card-desc">Remoção de tártaro e placa bacteriana, polimento dental e orientação personalizada de higiene bucal. Recomendada a cada 6 meses para manter a saúde e prevenir problemas.</p>
+          <p class="especialidades__card-desc">Remoção de tártaro e placa bacteriana, polimento dental e orientação
+            personalizada de higiene bucal. Recomendada a cada 6 meses para manter a saúde e prevenir problemas.</p>
         </div>
         <div class="especialidades__card" data-aos="fade-up" data-aos-delay="250">
           <span class="especialidades__number" aria-hidden="true">05</span>
           <h3 class="especialidades__card-title">Restauração Dental</h3>
           <p class="especialidades__card-sub">Dentes restaurados com precisão e estética</p>
-          <p class="especialidades__card-desc">Restaurações em resina de alta qualidade que devolvem a forma, função e aparência natural dos dentes. Cor personalizada para um resultado imperceptível.</p>
+          <p class="especialidades__card-desc">Restaurações em resina de alta qualidade que devolvem a forma, função e
+            aparência natural dos dentes. Cor personalizada para um resultado imperceptível.</p>
         </div>
         <div class="especialidades__card" data-aos="fade-up" data-aos-delay="300">
           <span class="especialidades__number" aria-hidden="true">06</span>
           <h3 class="especialidades__card-title">Ortodontia</h3>
           <p class="especialidades__card-sub">Dentes alinhados com discrição e conforto</p>
-          <p class="especialidades__card-desc">Aparelhos estéticos e alinhadores invisíveis para correção de mordida e alinhamento dental. Opções discretas para quem não abre mão da estética durante o tratamento.</p>
+          <p class="especialidades__card-desc">Aparelhos estéticos e alinhadores invisíveis para correção de mordida e
+            alinhamento dental. Opções discretas para quem não abre mão da estética durante o tratamento.</p>
         </div>
       </div>
     </section>
@@ -183,7 +237,8 @@
             <span class="porque__stat" data-count="10">0</span>
             <span class="porque__stat-label">anos de experiência</span>
             <h3 class="porque__item-title">Atendimento humanizado</h3>
-            <p class="porque__item-text">Você é ouvido antes de qualquer procedimento. Cada plano é feito sob medida.</p>
+            <p class="porque__item-text">Você é ouvido antes de qualquer procedimento. Cada plano é feito sob medida.
+            </p>
           </div>
           <div class="porque__item" data-aos="fade-up" data-aos-delay="200">
             <span class="porque__stat" data-count="6">0</span>
@@ -215,17 +270,20 @@
           <div class="steps__item" data-aos="fade-up" data-aos-delay="100">
             <div class="steps__badge">1</div>
             <h3 class="steps__item-title">Avaliação completa</h3>
-            <p class="steps__item-text">Exame clínico, conversa detalhada sobre o que te incomoda e apresentação das opções de tratamento. Tudo explicado com clareza, sem jargão.</p>
+            <p class="steps__item-text">Exame clínico, conversa detalhada sobre o que te incomoda e apresentação das
+              opções de tratamento. Tudo explicado com clareza, sem jargão.</p>
           </div>
           <div class="steps__item" data-aos="fade-up" data-aos-delay="200">
             <div class="steps__badge">2</div>
             <h3 class="steps__item-title">Plano personalizado</h3>
-            <p class="steps__item-text">Definimos juntos o melhor caminho: quais procedimentos, em que ordem, quanto tempo e quanto custa. Transparência total.</p>
+            <p class="steps__item-text">Definimos juntos o melhor caminho: quais procedimentos, em que ordem, quanto
+              tempo e quanto custa. Transparência total.</p>
           </div>
           <div class="steps__item" data-aos="fade-up" data-aos-delay="300">
             <div class="steps__badge">3</div>
             <h3 class="steps__item-title">Tratamento e acompanhamento</h3>
-            <p class="steps__item-text">Execução com cuidado e tecnologia. Acompanhamento para garantir que o resultado se mantenha no longo prazo.</p>
+            <p class="steps__item-text">Execução com cuidado e tecnologia. Acompanhamento para garantir que o resultado
+              se mantenha no longo prazo.</p>
           </div>
         </div>
       </div>
@@ -241,15 +299,18 @@
         <p class="depoimentos__eyebrow" data-aos="fade-up">O que dizem nossos pacientes</p>
         <div class="depoimentos__stack">
           <blockquote class="depoimentos__quote depoimentos__quote--left" data-aos="fade-right">
-            <p>Fiz meu clareamento e não imaginava que o resultado seria tão natural. Me sinto muito mais confiante para sorrir.</p>
+            <p>Fiz meu clareamento e não imaginava que o resultado seria tão natural. Me sinto muito mais confiante para
+              sorrir.</p>
             <cite class="depoimentos__author">— Camila, 29 anos</cite>
           </blockquote>
           <blockquote class="depoimentos__quote depoimentos__quote--right" data-aos="fade-left">
-            <p>Sempre tive medo de dentista, mas o atendimento aqui é outro nível. Me explicaram tudo com calma e o procedimento foi tranquilo.</p>
+            <p>Sempre tive medo de dentista, mas o atendimento aqui é outro nível. Me explicaram tudo com calma e o
+              procedimento foi tranquilo.</p>
             <cite class="depoimentos__author">— Lucas, 34 anos</cite>
           </blockquote>
           <blockquote class="depoimentos__quote depoimentos__quote--left" data-aos="fade-right">
-            <p>As lentes de contato mudaram meu sorriso completamente. Parece que sempre foi assim — ninguém acredita que fiz.</p>
+            <p>As lentes de contato mudaram meu sorriso completamente. Parece que sempre foi assim — ninguém acredita
+              que fiz.</p>
             <cite class="depoimentos__author">— Fernanda, 41 anos</cite>
           </blockquote>
         </div>
@@ -271,7 +332,8 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Com as técnicas atuais, a sensibilidade é mínima e controlada. Usamos protocolos que protegem o esmalte e reduzem o desconforto ao máximo.</p>
+              <p>Com as técnicas atuais, a sensibilidade é mínima e controlada. Usamos protocolos que protegem o esmalte
+                e reduzem o desconforto ao máximo.</p>
             </div>
           </div>
           <div class="faq__item" data-aos="fade-up" data-aos-delay="100">
@@ -280,7 +342,8 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Sim. O planejamento digital permite personalizar cada lâmina para harmonizar com o formato do seu rosto. O resultado é um sorriso bonito e natural, não artificial.</p>
+              <p>Sim. O planejamento digital permite personalizar cada lâmina para harmonizar com o formato do seu
+                rosto. O resultado é um sorriso bonito e natural, não artificial.</p>
             </div>
           </div>
           <div class="faq__item" data-aos="fade-up" data-aos-delay="150">
@@ -289,7 +352,8 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Quando realizada por profissional habilitado, sim. Utilizamos produtos de alta qualidade e técnicas minimamente invasivas com foco em resultados naturais.</p>
+              <p>Quando realizada por profissional habilitado, sim. Utilizamos produtos de alta qualidade e técnicas
+                minimamente invasivas com foco em resultados naturais.</p>
             </div>
           </div>
           <div class="faq__item" data-aos="fade-up" data-aos-delay="200">
@@ -298,7 +362,8 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>O ideal é a cada 6 meses. A profilaxia regular previne cáries, gengivite e outros problemas que custam mais para tratar depois.</p>
+              <p>O ideal é a cada 6 meses. A profilaxia regular previne cáries, gengivite e outros problemas que custam
+                mais para tratar depois.</p>
             </div>
           </div>
           <div class="faq__item" data-aos="fade-up" data-aos-delay="250">
@@ -307,7 +372,8 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>A avaliação inicial tem valor acessível e pode ser descontada do tratamento. Entre em contato para saber mais.</p>
+              <p>A avaliação inicial tem valor acessível e pode ser descontada do tratamento. Entre em contato para
+                saber mais.</p>
             </div>
           </div>
           <div class="faq__item" data-aos="fade-up" data-aos-delay="300">
@@ -316,7 +382,9 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Av. Lindolfo Monteiro, 813 — Fátima, Zona Leste de Teresina. Região nobre, com fácil acesso e estacionamento. <a href="https://maps.app.goo.gl/494c7CWX38Vh5hce9?g_st=iw" target="_blank" rel="noopener">Ver no mapa</a></p>
+              <p>Av. Lindolfo Monteiro, 813 — Fátima, Zona Leste de Teresina. Região nobre, com fácil acesso e
+                estacionamento. <a href="https://maps.app.goo.gl/494c7CWX38Vh5hce9?g_st=iw" target="_blank"
+                  rel="noopener">Ver no mapa</a></p>
             </div>
           </div>
         </div>
@@ -329,14 +397,19 @@
     <section class="localizacao section">
       <div class="container">
         <p class="localizacao__eyebrow" data-aos="fade-up">Localização</p>
-        <h2 class="localizacao__title" data-aos="fade-up" data-aos-delay="50">Fácil acesso na Zona Leste de Teresina</h2>
+        <h2 class="localizacao__title" data-aos="fade-up" data-aos-delay="50">Fácil acesso na Zona Leste de Teresina
+        </h2>
         <div class="localizacao__wrapper" data-aos="fade-up" data-aos-delay="150">
           <div class="localizacao__info">
             <p class="localizacao__address">Av. Lindolfo Monteiro, 813 — Fátima<br>Teresina, Piauí</p>
-            <a href="https://maps.app.goo.gl/494c7CWX38Vh5hce9?g_st=iw" class="localizacao__link" target="_blank" rel="noopener">Abrir no Google Maps</a>
+            <a href="https://maps.app.goo.gl/494c7CWX38Vh5hce9?g_st=iw" class="localizacao__link" target="_blank"
+              rel="noopener">Abrir no Google Maps</a>
           </div>
           <div class="localizacao__map">
-            <iframe src="https://www.google.com/maps?q=Av.+Lindolfo+Monteiro,+813,+Fatima,+Teresina,+PI,+Brasil&z=16&output=embed" width="100%" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Clínica Valdemir Neto no Google Maps"></iframe>
+            <iframe
+              src="https://www.google.com/maps?q=Av.+Lindolfo+Monteiro,+813,+Fatima,+Teresina,+PI,+Brasil&z=16&output=embed"
+              width="100%" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Localização Clínica Valdemir Neto no Google Maps"></iframe>
           </div>
         </div>
       </div>
@@ -352,10 +425,13 @@
       <div class="container cta-final__inner">
         <div class="cta-final__text">
           <h2 class="cta-final__title" data-aos="fade-up">Seu sorriso merece atenção profissional</h2>
-          <p class="cta-final__sub" data-aos="fade-up" data-aos-delay="100">Agende sua consulta com o Dr. Valdemir Neto. Atendimento completo, do preventivo ao estético. Zona Leste de Teresina.</p>
+          <p class="cta-final__sub" data-aos="fade-up" data-aos-delay="100">Agende sua consulta com o Dr. Valdemir Neto.
+            Atendimento completo, do preventivo ao estético. Zona Leste de Teresina.</p>
         </div>
         <div class="cta-final__action" data-aos="fade-up" data-aos-delay="200">
-          <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Valdemir%20Neto." class="cta-final__btn" aria-label="Agendar pelo WhatsApp">
+          <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Valdemir%20Neto."
+            class="cta-final__btn" aria-label="Agendar pelo WhatsApp"
+            onclick="return gtag_report_conversion(this.href);">
             Agendar pelo WhatsApp
           </a>
         </div>
@@ -389,20 +465,25 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__disclaimer">Resultados podem variar de acordo com cada caso. As imagens são meramente ilustrativas.</p>
+        <p class="footer__disclaimer">Resultados podem variar de acordo com cada caso. As imagens são meramente
+          ilustrativas.</p>
         <p>&copy; <span id="year"></span> Clínica Valdemir Neto. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
 
   <!-- Botão flutuante WhatsApp -->
-  <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Valdemir%20Neto." class="whatsapp-fab is-hidden" id="whatsappFab" aria-label="Fale conosco pelo WhatsApp" target="_blank" rel="noopener">
+  <a href="https://wa.me/5586994263194?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Valdemir%20Neto."
+    class="whatsapp-fab is-hidden" id="whatsappFab" aria-label="Fale conosco pelo WhatsApp" target="_blank"
+    rel="noopener" onclick="return gtag_report_conversion(this.href);">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
     </svg>
   </a>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="./script.js"></script>
 </body>
+
 </html>
