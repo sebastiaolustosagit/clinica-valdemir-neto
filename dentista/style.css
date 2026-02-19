@@ -1,6 +1,6 @@
 /* ==========================================
    CUSTOM PROPERTIES
-   Clinica Valdemir Neto — Dark Mode Premium
+   Dentista em Teresina — Clínica Valdemir Neto
    Fontes: DM Serif Display + DM Sans
    ========================================== */
 
@@ -105,16 +105,16 @@ blockquote {
 }
 
 /* ==========================================
-   SECAO 1: HERO
-   Split Assimetrico 60/40
-   Headline >150px | Dark Mode | Hover Lift
+   SEÇÃO 1: HERO
+   Imersivo Centralizado
+   Headline Gigante | Dot Grid | Fade-in Stagger
    ========================================== */
 
 .hero {
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   overflow: hidden;
   background: var(--color-bg);
@@ -128,37 +128,64 @@ blockquote {
   padding-right: var(--container-px);
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
+  z-index: 1;
+}
+
+.hero__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(200, 164, 97, 0.12) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+.hero__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 164, 97, 0.08), transparent 70%);
+  z-index: 0;
+  animation: heroGlow 8s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
 }
 
 .hero__content {
-  padding-top: clamp(6rem, 15vh, 10rem);
-  padding-bottom: clamp(3rem, 8vh, 6rem);
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(4rem, 8vh, 6rem);
+  text-align: center;
 }
 
-.hero__logo {
-  display: block;
-  width: clamp(180px, 30vw, 280px);
-  height: auto;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 768px) {
-  .hero__logo {
-    margin-left: 0;
-    margin-right: 0;
-  }
+.hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.2s;
 }
 
 .hero__headline {
-  font-size: clamp(2.75rem, 8vw, 5.5rem);
-  line-height: 1.05;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1.08;
   color: var(--color-text);
-  margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.4s;
 }
 
 .hero__headline em {
@@ -170,8 +197,10 @@ blockquote {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   line-height: 1.7;
   color: var(--color-text-muted);
-  max-width: 480px;
-  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.6s;
 }
 
 .hero__cta {
@@ -189,6 +218,8 @@ blockquote {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
               box-shadow 0.3s ease,
               background 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 0.8s;
 }
 
 .hero__cta:hover {
@@ -201,27 +232,25 @@ blockquote {
   transform: translateY(-1px);
 }
 
-.hero__microcopy {
-  display: block;
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  margin-top: 1rem;
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Visual — foto Dr. Valdemir */
 .hero__visual {
   position: relative;
-  display: none;
-  height: 100%;
-  min-height: 400px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  padding-bottom: 3rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards 1s;
 }
 
 .hero__img {
-  width: clamp(280px, 22vw, 380px);
-  height: clamp(280px, 22vw, 380px);
+  width: clamp(260px, 75vw, 400px);
+  height: clamp(260px, 75vw, 400px);
   object-fit: cover;
   object-position: center top;
   border-radius: 12px;
@@ -235,61 +264,48 @@ blockquote {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   border-radius: 16px;
-  background: radial-gradient(circle, rgba(200, 164, 97, 0.12), transparent 70%);
+  background: radial-gradient(circle, rgba(200, 164, 97, 0.1), transparent 70%);
   z-index: 0;
-  animation: heroGlow 6s ease-in-out infinite;
-}
-
-@keyframes heroGlow {
-  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
-  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+  animation: solucaoGlow 6s ease-in-out infinite;
 }
 
 @media (min-width: 768px) {
+  .hero {
+    align-items: center;
+  }
   .hero__inner {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 55% 45%;
+    gap: 4rem;
     min-height: 100vh;
     min-height: 100dvh;
   }
-
   .hero__content {
+    text-align: left;
     padding-top: 0;
+  }
+  .hero__sub {
+    margin-left: 0;
+  }
+  .hero__visual {
     padding-bottom: 0;
   }
-
-  .hero__visual {
-    display: flex;
-  }
-
-  .hero__microcopy {
-    display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero__headline {
-    font-size: clamp(3.5rem, 5.5vw, 5rem);
+  .hero__img {
+    width: clamp(280px, 35vw, 500px);
+    height: clamp(280px, 35vw, 500px);
   }
 }
 
 /* ==========================================
-   SECAO 2: O PROBLEMA
-   Progressive Reveal | Stagger | Container Narrow
+   SEÇÃO 2: O PROBLEMA
+   Card Row Horizontal
+   Scroll Snap | Selective Opacity | Stagger
    ========================================== */
 
 .problema {
   background: var(--color-bg-elevated);
-}
-
-.problema__container {
-  width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  padding-left: var(--container-px);
-  padding-right: var(--container-px);
 }
 
 .problema__eyebrow {
@@ -305,49 +321,75 @@ blockquote {
 .problema__title {
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   color: var(--color-text);
-  margin-bottom: 3rem;
-  max-width: 600px;
+  max-width: 700px;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
-.problema__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  margin-bottom: 3rem;
-}
-
-.problema__item {
-  display: flex;
-  align-items: flex-start;
+.problema__grid {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  padding: 0 var(--container-px);
+  max-width: var(--container-max);
+  margin: 0 auto clamp(2rem, 4vw, 3rem) auto;
+}
+
+.problema__card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.problema__card:hover {
+  border-color: rgba(200, 164, 97, 0.3);
+}
+
+.problema__icon {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.4;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.problema__card p {
+  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
   line-height: 1.6;
   color: var(--color-text-muted);
 }
 
-.problema__marker {
-  flex-shrink: 0;
-  width: 8px;
-  height: 8px;
-  margin-top: 0.5rem;
-  border-radius: 50%;
-  background: var(--color-primary);
-  opacity: 0.6;
-}
-
 .problema__closing {
   font-family: var(--font-heading);
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
   line-height: 1.5;
   color: var(--color-text);
   border-left: 2px solid var(--color-primary);
   padding-left: 1.5rem;
+  max-width: 700px;
+}
+
+@media (min-width: 768px) {
+  .problema__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .problema__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* ==========================================
-   SECAO 3: A SOLUCAO
-   Split Vertical com Overlap
-   Texto com Gradiente | Sticky Element
+   SEÇÃO 3: A SOLUÇÃO
+   Editorial Magazine
+   Texto 2 colunas | Drop Cap | Pull Quote
    ========================================== */
 
 .solucao {
@@ -357,18 +399,15 @@ blockquote {
 .solucao__inner {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
 }
 
 .solucao__visual {
-  width: clamp(240px, 50vw, 340px);
-  height: clamp(240px, 50vw, 340px);
-  border-radius: 12px;
   position: relative;
-  overflow: hidden;
+  width: clamp(200px, 50vw, 280px);
+  height: clamp(200px, 50vw, 280px);
   margin: 0 auto;
-  border: 2px solid rgba(200, 164, 97, 0.2);
 }
 
 .solucao__img {
@@ -377,16 +416,38 @@ blockquote {
   object-fit: cover;
   object-position: center top;
   border-radius: 12px;
+  border: 2px solid rgba(200, 164, 97, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.solucao__img-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  border-radius: 16px;
+  background: radial-gradient(circle, rgba(200, 164, 97, 0.1), transparent 70%);
+  z-index: 0;
+  animation: solucaoGlow 6s ease-in-out infinite;
+}
+
+@keyframes solucaoGlow {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
 }
 
 .solucao__title {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  line-height: 1.15;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: var(--color-text);
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #F8F8F8 0%, #C8A461 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+
+.solucao__title em {
+  font-style: italic;
+  color: var(--color-primary);
 }
 
 .solucao__text {
@@ -396,39 +457,48 @@ blockquote {
   margin-bottom: 1.5rem;
 }
 
-.solucao__text--emphasis {
+.solucao__text:last-child {
+  margin-bottom: 0;
+}
+
+.solucao__text--dropcap::first-letter {
+  font-family: var(--font-heading);
+  font-size: 3.5em;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.1em;
+  margin-top: 0.05em;
+  color: var(--color-primary);
+}
+
+.solucao__text--highlight {
   color: var(--color-text);
   font-weight: 500;
-  margin-bottom: 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--color-primary);
 }
 
 @media (min-width: 768px) {
   .solucao__inner {
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 35% 1fr;
+    gap: clamp(3rem, 5vw, 5rem);
   }
 
   .solucao__visual {
-    width: clamp(280px, 20vw, 380px);
-    height: clamp(280px, 20vw, 380px);
-    position: sticky;
-    top: 50%;
-    transform: translateY(-50%);
+    width: clamp(240px, 22vw, 320px);
+    height: clamp(240px, 22vw, 320px);
     margin: 0;
   }
 }
 
 /* ==========================================
-   SECAO 4: ESPECIALIDADES
-   Bento Box | Hover Reveal | Selective Color
+   SEÇÃO 4: ESPECIALIDADES
+   Scroll Horizontal com Snap
+   Large Cards | Hover Scale | Número gigante
    ========================================== */
 
 .especialidades {
   background: var(--color-bg-elevated);
-}
-
-.especialidades__header {
-  text-align: center;
-  margin-bottom: clamp(3rem, 6vw, 4rem);
 }
 
 .especialidades__eyebrow {
@@ -441,37 +511,32 @@ blockquote {
   margin-bottom: 1rem;
 }
 
-.especialidades__title {
+.especialidades__heading {
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   color: var(--color-text);
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  max-width: 600px;
 }
 
 .especialidades__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(0.75rem, 1.5vw, 1rem);
+  gap: clamp(1rem, 2vw, 1.5rem);
+  padding: 0 var(--container-px);
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 
 .especialidades__card {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: 4px;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(2rem, 3vw, 2.5rem);
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  position: relative;
-  transition: border-color 0.3s ease;
-}
-
-.especialidades__card--destaque::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: clamp(1.5rem, 3vw, 2.5rem);
-  width: 40px;
-  height: 2px;
-  background: var(--color-primary);
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .especialidades__card:hover {
@@ -480,21 +545,49 @@ blockquote {
 
 .especialidades__number {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  bottom: -0.5rem;
+  right: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(5rem, 10vw, 7rem);
+  color: rgba(200, 164, 97, 0.05);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.especialidades__badge {
+  display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.75rem;
-  color: rgba(200, 164, 97, 0.2);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background: var(--color-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
 }
 
 .especialidades__card-title {
   font-size: clamp(1.25rem, 2vw, 1.5rem);
-  color: var(--color-text);
-  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
 }
 
-.especialidades__card-title--accent {
-  color: var(--color-primary);
+.especialidades__card-sub {
+  font-family: var(--font-heading);
+  font-size: clamp(0.9375rem, 1.2vw, 1rem);
+  font-style: italic;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .especialidades__card-desc {
@@ -502,23 +595,14 @@ blockquote {
   font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--color-text-muted);
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
 }
 
 @media (min-width: 768px) {
-  .especialidades__card {
-    min-height: 200px;
-  }
-
-  .especialidades__card--destaque {
-    min-height: 240px;
-  }
-
   .especialidades__grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .especialidades__card--span2 {
-    grid-column: span 2;
   }
 }
 
@@ -527,94 +611,79 @@ blockquote {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .especialidades__card--span2 {
-    grid-column: span 2;
+  .especialidades__card {
+    min-height: 320px;
   }
 
-  .especialidades__card--full {
-    grid-column: span 3;
-    max-width: 400px;
+  .especialidades__card:hover {
+    transform: translateY(-4px);
   }
 }
 
 /* ==========================================
-   SECAO 5: POR QUE NOS
-   Floating Cards | Glassmorphism | Mouse Parallax
+   SEÇÃO 5: POR QUE NÓS
+   Stats + Editorial
+   Counter Animado | Grid Assimétrico
    ========================================== */
 
 .porque {
   background: var(--color-bg);
-  position: relative;
-  overflow: hidden;
-}
-
-.porque__bg-circle {
-  position: absolute;
-  border-radius: 50%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.porque__bg-circle--1 {
-  top: 10%;
-  left: -5%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(200, 164, 97, 0.06), transparent);
-}
-
-.porque__bg-circle--2 {
-  bottom: 10%;
-  right: -5%;
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(circle, rgba(200, 164, 97, 0.04), transparent);
-}
-
-.porque__wrapper {
-  position: relative;
-  z-index: 1;
 }
 
 .porque__title {
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   color: var(--color-text);
-  line-height: 1.15;
-  max-width: 600px;
+  max-width: 700px;
   margin-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 .porque__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(1.5rem, 3vw, 2rem);
+  gap: clamp(2.5rem, 5vw, 3rem);
 }
 
-.porque__card {
-  background: rgba(17, 27, 46, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(200, 164, 97, 0.1);
-  border-radius: 8px;
-  padding: clamp(2rem, 4vw, 3rem);
-  transition: border-color 0.3s ease, transform 0.3s ease-out;
+.porque__stat {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 0.25rem;
 }
 
-.porque__card:hover {
-  border-color: rgba(200, 164, 97, 0.25);
+.porque__stat::after {
+  content: '+';
 }
 
-.porque__card-title {
+.porque__stat-icon {
+  display: block;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.porque__stat-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.porque__item-title {
   font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.02em;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
 }
 
-.porque__card-text {
-  font-family: var(--font-body);
+.porque__item-text {
   font-size: 0.9375rem;
   line-height: 1.7;
   color: var(--color-text-muted);
@@ -622,57 +691,19 @@ blockquote {
 
 @media (min-width: 768px) {
   .porque__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(2rem, 4vw, 4rem);
   }
-
-  .porque__card--1 { transform: translateY(0); }
-  .porque__card--2 { transform: translateY(20px); }
-  .porque__card--3 { transform: translateY(-10px); }
-  .porque__card--4 { transform: translateY(30px); }
-}
-
-@media (min-width: 1024px) {
-  .porque__card--1,
-  .porque__card--3 {
-    animation: subtleFloat 7s ease-in-out infinite;
-  }
-
-  .porque__card--2,
-  .porque__card--4 {
-    animation: subtleFloat2 9s ease-in-out infinite 1s;
-  }
-}
-
-@keyframes subtleFloat {
-  0%, 100% { transform: translateY(var(--base-y, 0px)); }
-  50% { transform: translateY(calc(var(--base-y, 0px) - 6px)); }
-}
-
-@keyframes subtleFloat2 {
-  0%, 100% { transform: translateY(var(--base-y, 0px)); }
-  50% { transform: translateY(calc(var(--base-y, 0px) - 4px)); }
 }
 
 /* ==========================================
-   SECAO 6: COMO FUNCIONA
-   Scroll Storytelling | Counter Animation | Draw SVG
+   SEÇÃO 6: COMO FUNCIONA
+   Timeline Horizontal
+   Connector Line | Badge Number | Hover Lift
    ========================================== */
 
 .steps {
   background: var(--color-bg-elevated);
-}
-
-.steps__container {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding-left: var(--container-px);
-  padding-right: var(--container-px);
-}
-
-.steps__header {
-  text-align: center;
-  margin-bottom: clamp(3rem, 7vw, 5rem);
 }
 
 .steps__eyebrow {
@@ -682,104 +713,101 @@ blockquote {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-primary);
+  text-align: center;
   margin-bottom: 1rem;
 }
 
 .steps__title {
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   color: var(--color-text);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto clamp(3rem, 6vw, 5rem) auto;
 }
 
-.steps__list {
-  display: flex;
-  flex-direction: column;
+.steps__timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   position: relative;
 }
 
 .steps__line {
-  position: absolute;
-  left: 28px;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, var(--color-primary), var(--color-primary), transparent);
-  opacity: 0.3;
-}
-
-.steps__line-fill {
-  width: 100%;
-  height: 100%;
-  background: var(--color-primary);
-  clip-path: inset(0 0 100% 0);
-  transition: clip-path 1.5s ease;
-}
-
-.steps.is-visible .steps__line-fill {
-  clip-path: inset(0 0 0% 0);
+  display: none;
 }
 
 .steps__item {
-  display: flex;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  margin-bottom: clamp(3rem, 6vw, 4rem);
+  text-align: center;
   position: relative;
+  transition: transform 0.3s ease;
 }
 
-.steps__item:last-child {
-  margin-bottom: 0;
+.steps__item:hover {
+  transform: translateY(-4px);
 }
 
-.steps__number {
-  flex-shrink: 0;
+.steps__badge {
   width: 56px;
   height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-bg-elevated);
+  margin: 0 auto 1.25rem auto;
   border: 1px solid rgba(200, 164, 97, 0.3);
   border-radius: 50%;
   font-family: var(--font-heading);
   font-size: 1.25rem;
   color: var(--color-primary);
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
-.steps__number:hover {
-  transform: scale(1.05);
+.steps__item:hover .steps__badge {
   border-color: var(--color-primary);
 }
 
 .steps__item-title {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
   color: var(--color-text);
   margin-bottom: 0.75rem;
 }
 
 .steps__item-text {
-  font-family: var(--font-body);
-  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+  font-size: 0.9375rem;
   line-height: 1.7;
   color: var(--color-text-muted);
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  .steps__line {
-    left: 50px;
+  .steps__timeline {
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(2rem, 4vw, 3rem);
   }
 
-  .steps__number {
-    width: 100px;
-    height: 100px;
-    font-size: 2rem;
+  .steps__line {
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: calc(16.666% + 28px);
+    right: calc(16.666% + 28px);
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-primary), var(--color-primary), transparent);
+    opacity: 0.3;
+    z-index: 0;
+  }
+
+  .steps__badge {
+    position: relative;
+    z-index: 1;
+    background: var(--color-bg-elevated);
   }
 }
 
 /* ==========================================
-   SECAO 7: DEPOIMENTOS
-   Carousel Infinite | Hover Lift | Noise Texture
+   SEÇÃO 7: DEPOIMENTOS
+   Stacked Full-Width Quotes
+   Large Quotation Mark | Alternating Alignment
    ========================================== */
 
 .depoimentos {
@@ -793,79 +821,40 @@ blockquote {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-primary);
-  text-align: center;
-  margin-bottom: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 
-.depoimentos__carousel {
-  overflow: hidden;
-  width: 100%;
-}
-
-.depoimentos__track {
-  display: flex;
-  gap: 1rem;
-  animation: autoScroll 30s linear infinite;
-}
-
-.depoimentos__track:hover {
-  animation-play-state: paused;
-}
-
-.depoimentos__track.is-paused {
-  animation-play-state: paused;
-}
-
-@keyframes autoScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.depoimentos__card {
-  flex-shrink: 0;
-  width: 300px;
-  background: var(--color-bg-elevated);
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  padding: clamp(2rem, 3vw, 2.5rem);
+.depoimentos__stack {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 220px;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.depoimentos__card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  border-color: rgba(200, 164, 97, 0.2);
+  gap: clamp(2rem, 5vw, 3.5rem);
 }
 
 .depoimentos__quote {
+  max-width: 700px;
   position: relative;
-  margin-bottom: 1.5rem;
+  padding-left: 2rem;
 }
 
 .depoimentos__quote::before {
   content: '\201C';
   font-family: var(--font-heading);
-  font-size: 3rem;
-  color: rgba(200, 164, 97, 0.3);
+  font-size: clamp(4rem, 8vw, 6rem);
+  color: rgba(200, 164, 97, 0.15);
   position: absolute;
-  top: -0.5rem;
-  left: -0.25rem;
+  top: -1.5rem;
+  left: -0.5rem;
   line-height: 1;
+  pointer-events: none;
 }
 
 .depoimentos__quote p {
   font-family: var(--font-heading);
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
   font-style: italic;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--color-text);
-  padding-left: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .depoimentos__author {
@@ -876,35 +865,50 @@ blockquote {
   color: var(--color-text-muted);
 }
 
+.depoimentos__quote--left {
+  align-self: flex-start;
+}
+
+.depoimentos__quote--right {
+  align-self: flex-start;
+}
+
 @media (min-width: 768px) {
-  .depoimentos__track {
-    gap: 1.5rem;
+  .depoimentos__quote--right {
+    align-self: flex-end;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 2rem;
   }
 
-  .depoimentos__card {
-    width: clamp(300px, 40vw, 420px);
+  .depoimentos__quote--right::before {
+    left: auto;
+    right: -0.5rem;
+    content: '\201D';
   }
 }
 
 /* ==========================================
-   SECAO 8: FAQ
-   Reveal on Demand | Clip Reveal | Asymmetric Padding
+   SEÇÃO 8: FAQ
+   Accordion Centralizado
+   Smooth Expand | Max-width estreito
    ========================================== */
 
 .faq {
   background: var(--color-bg-elevated);
 }
 
-.faq__inner {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+.faq__container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--container-px);
 }
 
 .faq__title {
   font-size: clamp(1.75rem, 4vw, 2.75rem);
   color: var(--color-text);
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
 }
 
 .faq__item {
@@ -924,7 +928,6 @@ blockquote {
   font-weight: 500;
   color: var(--color-text);
   text-align: left;
-  cursor: pointer;
   transition: color 0.2s ease;
 }
 
@@ -967,7 +970,6 @@ blockquote {
   font-size: 0.9375rem;
   line-height: 1.7;
   color: var(--color-text-muted);
-  padding-top: 0;
   padding-bottom: 1.5rem;
 }
 
@@ -981,29 +983,8 @@ blockquote {
   color: var(--color-primary-hover);
 }
 
-@media (min-width: 768px) {
-  .faq__inner {
-    grid-template-columns: 40% 60%;
-    gap: clamp(2rem, 5vw, 4rem);
-  }
-
-  .faq__heading {
-    position: sticky;
-    top: clamp(2rem, 5vw, 4rem);
-    align-self: start;
-  }
-
-  .faq__title {
-    margin-bottom: 0;
-  }
-
-  .faq__list {
-    padding-left: clamp(1rem, 3vw, 2rem);
-  }
-}
-
 /* ==========================================
-   LOCALIZACAO — Google Maps Embed
+   LOCALIZAÇÃO
    ========================================== */
 
 .localizacao {
@@ -1042,7 +1023,6 @@ blockquote {
 }
 
 .localizacao__address {
-  font-family: var(--font-body);
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   line-height: 1.7;
   color: var(--color-text-muted);
@@ -1092,57 +1072,46 @@ blockquote {
 }
 
 /* ==========================================
-   SECAO 9: CTA FINAL
-   Hero Dominante | Headline Full Width | Gradiente Animado
+   SEÇÃO 10: CTA FINAL
+   Split CTA
+   Texto esquerda | CTA direita | Background texture
    ========================================== */
 
 .cta-final {
-  background: var(--color-bg);
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  background: var(--color-bg-elevated);
   position: relative;
   overflow: hidden;
 }
 
-.cta-final__bg {
+.cta-final__texture {
   position: absolute;
   inset: 0;
+  background-image: radial-gradient(rgba(200, 164, 97, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
   z-index: 0;
-  background: radial-gradient(ellipse at 20% 50%, rgba(200, 164, 97, 0.08) 0%, transparent 50%),
-              radial-gradient(ellipse at 80% 50%, rgba(200, 164, 97, 0.05) 0%, transparent 50%);
-  background-size: 200% 200%;
-  animation: ctaGradient 15s ease infinite;
 }
 
-@keyframes ctaGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.cta-final__content {
+.cta-final__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
   position: relative;
   z-index: 1;
-  max-width: 900px;
 }
 
 .cta-final__title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1.1;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.15;
   color: var(--color-text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .cta-final__sub {
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
   line-height: 1.7;
   color: var(--color-text-muted);
-  max-width: 600px;
-  margin: 0 auto 2.5rem auto;
+  max-width: 500px;
 }
 
 .cta-final__btn {
@@ -1157,6 +1126,7 @@ blockquote {
   padding: 1.125rem 2.5rem;
   min-height: 48px;
   border-radius: 0;
+  white-space: nowrap;
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
               box-shadow 0.3s ease,
               background 0.3s ease;
@@ -1170,6 +1140,18 @@ blockquote {
 
 .cta-final__btn:active {
   transform: translateY(-1px);
+}
+
+@media (min-width: 768px) {
+  .cta-final__inner {
+    grid-template-columns: 1fr auto;
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+
+  .cta-final__action {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* ==========================================
@@ -1230,8 +1212,6 @@ blockquote {
 }
 
 .footer__link {
-  color: var(--color-text-muted);
-  text-decoration: none;
   transition: color 0.2s ease;
 }
 
@@ -1322,66 +1302,4 @@ blockquote {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-/* ==========================================
-   LEGAL PAGES (Política de Privacidade, Termos de Uso)
-   ========================================== */
-
-.legal {
-  padding: var(--section-py) 0;
-}
-
-.legal__container {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 0 var(--container-px);
-}
-
-.legal__back {
-  display: inline-block;
-  color: var(--color-primary);
-  font-size: 0.875rem;
-  margin-bottom: 2rem;
-  transition: opacity 0.2s ease;
-}
-
-.legal__back:hover {
-  opacity: 0.7;
-}
-
-.legal__title {
-  font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  color: var(--color-text);
-  margin-bottom: 0.5rem;
-}
-
-.legal__updated {
-  font-size: 0.8125rem;
-  color: var(--color-text-muted);
-  margin-bottom: 2.5rem;
-}
-
-.legal__container h2 {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  color: var(--color-text);
-  margin: 2rem 0 0.75rem;
-}
-
-.legal__container p,
-.legal__container li {
-  color: var(--color-text-muted);
-  line-height: 1.8;
-  margin-bottom: 0.75rem;
-}
-
-.legal__container ul {
-  padding-left: 1.25rem;
-  margin-bottom: 1rem;
-}
-
-.legal__container a {
-  color: var(--color-primary);
 }
