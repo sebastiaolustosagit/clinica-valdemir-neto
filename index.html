@@ -5,6 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Consent Mode v2 (LGPD) — precisa rodar antes de qualquer tag -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      if (localStorage.getItem('cookieConsent') === 'accepted') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch(e){}
+  </script>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -245,7 +268,7 @@
       <div class="porque__bg-circle porque__bg-circle--2" aria-hidden="true"></div>
       <div class="container porque__wrapper">
         <h2 class="porque__title" data-aos="fade-up">
-          Uma clínica pensada para quem não aceita menos que o melhor
+          Uma clínica pensada para quem busca excelência em odontologia
         </h2>
         <div class="porque__grid" id="porqueGrid">
           <div class="porque__card porque__card--1" data-aos="fade-up" data-parallax="10">
@@ -308,7 +331,7 @@
             <div class="steps__content">
               <h3 class="steps__item-title">Resultado e acompanhamento</h3>
               <p class="steps__item-text">Sorriso entregue com qualidade que dura. Acompanhamento pós-tratamento para
-                garantir sua satisfação e saúde bucal a longo prazo.</p>
+                cuidar da sua saúde bucal a longo prazo.</p>
             </div>
           </div>
         </div>
@@ -411,8 +434,8 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Cada caso é único e o investimento depende do plano de tratamento. Agende sua avaliação gratuita para
-                receber um orçamento personalizado sem compromisso.</p>
+              <p>Cada caso é único e o investimento depende do plano de tratamento. Agende sua avaliação inicial sem
+                compromisso para receber um orçamento personalizado.</p>
             </div>
           </div>
           <div class="faq__item" data-aos="fade-up" data-aos-delay="150">
@@ -421,7 +444,7 @@
               <span class="faq__icon" aria-hidden="true">+</span>
             </button>
             <div class="faq__answer">
-              <p>Não. A técnica de prótese rápida do Dr. Valdemir garante que você nunca fique sem dentes em nenhuma
+              <p>Não. A técnica de prótese rápida do Dr. Valdemir permite que você não fique sem dentes em nenhuma
                 etapa do processo.</p>
             </div>
           </div>
@@ -542,6 +565,48 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="./script.js"></script>
+
+  <!-- Banner LGPD de cookies -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+    <p class="cookie-banner__text">
+      Usamos cookies para análise de tráfego e medição de campanhas publicitárias. Você pode aceitar todos
+      ou continuar apenas com os essenciais. <a href="./politica-de-privacidade.html">Saiba mais</a>.
+    </p>
+    <div class="cookie-banner__actions">
+      <button type="button" class="cookie-banner__btn" data-cookie-action="reject">Apenas essenciais</button>
+      <button type="button" class="cookie-banner__btn cookie-banner__btn--primary" data-cookie-action="accept">Aceitar todos</button>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var banner = document.getElementById('cookieBanner');
+      if (!banner) return;
+      var consent = null;
+      try { consent = localStorage.getItem('cookieConsent'); } catch (e) { }
+      if (!consent) banner.classList.add('is-visible');
+      banner.addEventListener('click', function (e) {
+        var t = e.target;
+        var action = t && t.getAttribute && t.getAttribute('data-cookie-action');
+        if (!action) return;
+        try {
+          if (action === 'accept') {
+            localStorage.setItem('cookieConsent', 'accepted');
+            if (typeof gtag === 'function') {
+              gtag('consent', 'update', {
+                ad_storage: 'granted',
+                ad_user_data: 'granted',
+                ad_personalization: 'granted',
+                analytics_storage: 'granted'
+              });
+            }
+          } else {
+            localStorage.setItem('cookieConsent', 'rejected');
+          }
+        } catch (err) { }
+        banner.classList.remove('is-visible');
+      });
+    })();
+  </script>
 </body>
 
 </html>

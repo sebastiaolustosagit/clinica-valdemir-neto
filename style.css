@@ -1385,3 +1385,96 @@ blockquote {
 .legal__container a {
   color: var(--color-primary);
 }
+
+/* ==========================================
+   LGPD COOKIE BANNER
+   ========================================== */
+.cookie-banner {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 9999;
+  max-width: 720px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+  display: none;
+  flex-direction: column;
+  gap: 0.85rem;
+  font-family: var(--font-body, system-ui, sans-serif);
+}
+
+.cookie-banner.is-visible {
+  display: flex;
+}
+
+.cookie-banner__text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  color: inherit;
+}
+
+.cookie-banner__text a {
+  color: var(--color-primary, #6366f1);
+  text-decoration: underline;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cookie-banner__btn {
+  flex: 1;
+  min-width: 130px;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.cookie-banner__btn--primary {
+  background: var(--color-primary, #6366f1);
+  color: #fff;
+  border-color: var(--color-primary, #6366f1);
+}
+
+.cookie-banner__btn:hover {
+  opacity: 0.85;
+}
+
+.cookie-banner__btn:active {
+  transform: translateY(1px);
+}
+
+@media (min-width: 640px) {
+  .cookie-banner {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .cookie-banner__text {
+    flex: 1;
+  }
+
+  .cookie-banner__actions {
+    flex: 0 0 auto;
+  }
+
+  .cookie-banner__btn {
+    min-width: 110px;
+  }
+}
