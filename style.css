@@ -252,8 +252,8 @@ blockquote {
    Usa display:contents pra "achatar" .hero__content e ordenar com `order`. */
 @media (max-width: 767.98px) {
   .hero__inner {
-    padding-top: clamp(6rem, 15vh, 10rem);
-    padding-bottom: clamp(3rem, 8vh, 6rem);
+    padding-top: clamp(1rem, 3vh, 1.75rem);
+    padding-bottom: clamp(2.5rem, 6vh, 4rem);
     gap: 0;
   }
 
