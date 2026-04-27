@@ -5,29 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Consent Mode v2 (LGPD) — precisa rodar antes de qualquer tag -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      analytics_storage: 'denied',
-      wait_for_update: 500
-    });
-    try {
-      if (localStorage.getItem('cookieConsent') === 'accepted') {
-        gtag('consent', 'update', {
-          ad_storage: 'granted',
-          ad_user_data: 'granted',
-          ad_personalization: 'granted',
-          analytics_storage: 'granted'
-        });
-      }
-    } catch(e){}
-  </script>
-
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -163,48 +140,6 @@
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-  <!-- Banner LGPD de cookies -->
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
-    <p class="cookie-banner__text">
-      Usamos cookies para análise de tráfego e medição de campanhas publicitárias. Você pode aceitar todos
-      ou continuar apenas com os essenciais. <a href="./politica-de-privacidade.html">Saiba mais</a>.
-    </p>
-    <div class="cookie-banner__actions">
-      <button type="button" class="cookie-banner__btn" data-cookie-action="reject">Apenas essenciais</button>
-      <button type="button" class="cookie-banner__btn cookie-banner__btn--primary" data-cookie-action="accept">Aceitar todos</button>
-    </div>
-  </div>
-  <script>
-    (function () {
-      var banner = document.getElementById('cookieBanner');
-      if (!banner) return;
-      var consent = null;
-      try { consent = localStorage.getItem('cookieConsent'); } catch (e) { }
-      if (!consent) banner.classList.add('is-visible');
-      banner.addEventListener('click', function (e) {
-        var t = e.target;
-        var action = t && t.getAttribute && t.getAttribute('data-cookie-action');
-        if (!action) return;
-        try {
-          if (action === 'accept') {
-            localStorage.setItem('cookieConsent', 'accepted');
-            if (typeof gtag === 'function') {
-              gtag('consent', 'update', {
-                ad_storage: 'granted',
-                ad_user_data: 'granted',
-                ad_personalization: 'granted',
-                analytics_storage: 'granted'
-              });
-            }
-          } else {
-            localStorage.setItem('cookieConsent', 'rejected');
-          }
-        } catch (err) { }
-        banner.classList.remove('is-visible');
-      });
-    })();
-  </script>
 </body>
 
 </html>
