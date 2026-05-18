@@ -8,13 +8,14 @@
   --font-heading: 'DM Serif Display', serif;
   --font-body: 'DM Sans', sans-serif;
 
-  --color-bg: #0B1121;
-  --color-bg-elevated: #111B2E;
-  --color-text: #F8F8F8;
-  --color-text-muted: #8A94A6;
-  --color-primary: #C8A461;
-  --color-primary-hover: #D4B77A;
-  --color-border: #1E2A3F;
+  --color-bg: #234556;
+  --color-bg-elevated: #2C5469;
+  --color-text: #E6E7E8;
+  --color-text-muted: #8FA0AC;
+  --color-primary: #D3A85B;
+  --color-primary-hover: #E0B976;
+  --color-border: #34607A;
+  --color-surface-alt: #373435;
   --color-error: #ef4444;
   --color-success: #10b981;
 
@@ -136,7 +137,7 @@ blockquote {
 .hero__dots {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(200, 164, 97, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(211, 168, 91, 0.12) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: 0;
 }
@@ -149,7 +150,7 @@ blockquote {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(200, 164, 97, 0.08), transparent 70%);
+  background: radial-gradient(circle, rgba(211, 168, 91, 0.08), transparent 70%);
   z-index: 0;
   animation: heroGlow 8s ease-in-out infinite;
 }
@@ -225,7 +226,7 @@ blockquote {
 .hero__cta:hover {
   transform: translateY(-3px);
   background: var(--color-primary-hover);
-  box-shadow: 0 8px 30px rgba(200, 164, 97, 0.25);
+  box-shadow: 0 8px 30px rgba(211, 168, 91, 0.25);
 }
 
 .hero__cta:active {
@@ -254,7 +255,7 @@ blockquote {
   object-fit: cover;
   object-position: center top;
   border-radius: 12px;
-  border: 2px solid rgba(200, 164, 97, 0.2);
+  border: 2px solid rgba(211, 168, 91, 0.2);
   position: relative;
   z-index: 1;
 }
@@ -267,7 +268,7 @@ blockquote {
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  background: radial-gradient(circle, rgba(200, 164, 97, 0.1), transparent 70%);
+  background: radial-gradient(circle, rgba(211, 168, 91, 0.1), transparent 70%);
   z-index: 0;
   animation: solucaoGlow 6s ease-in-out infinite;
 }
@@ -344,7 +345,7 @@ blockquote {
 }
 
 .problema__card:hover {
-  border-color: rgba(200, 164, 97, 0.3);
+  border-color: rgba(211, 168, 91, 0.3);
 }
 
 .problema__icon {
@@ -416,7 +417,7 @@ blockquote {
   object-fit: cover;
   object-position: center top;
   border-radius: 12px;
-  border: 2px solid rgba(200, 164, 97, 0.2);
+  border: 2px solid rgba(211, 168, 91, 0.2);
   position: relative;
   z-index: 1;
 }
@@ -429,7 +430,7 @@ blockquote {
   width: 120%;
   height: 120%;
   border-radius: 16px;
-  background: radial-gradient(circle, rgba(200, 164, 97, 0.1), transparent 70%);
+  background: radial-gradient(circle, rgba(211, 168, 91, 0.1), transparent 70%);
   z-index: 0;
   animation: solucaoGlow 6s ease-in-out infinite;
 }
@@ -540,7 +541,7 @@ blockquote {
 }
 
 .especialidades__card:hover {
-  border-color: rgba(200, 164, 97, 0.3);
+  border-color: rgba(211, 168, 91, 0.3);
 }
 
 .especialidades__number {
@@ -549,7 +550,7 @@ blockquote {
   right: 0.5rem;
   font-family: var(--font-heading);
   font-size: clamp(5rem, 10vw, 7rem);
-  color: rgba(200, 164, 97, 0.05);
+  color: rgba(211, 168, 91, 0.05);
   line-height: 1;
   pointer-events: none;
   z-index: 0;
@@ -753,7 +754,7 @@ blockquote {
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.25rem auto;
-  border: 1px solid rgba(200, 164, 97, 0.3);
+  border: 1px solid rgba(211, 168, 91, 0.3);
   border-radius: 50%;
   font-family: var(--font-heading);
   font-size: 1.25rem;
@@ -840,7 +841,7 @@ blockquote {
   content: '\201C';
   font-family: var(--font-heading);
   font-size: clamp(4rem, 8vw, 6rem);
-  color: rgba(200, 164, 97, 0.15);
+  color: rgba(211, 168, 91, 0.15);
   position: absolute;
   top: -1.5rem;
   left: -0.5rem;
@@ -1086,7 +1087,7 @@ blockquote {
 .cta-final__texture {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(200, 164, 97, 0.04) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(211, 168, 91, 0.04) 1px, transparent 1px);
   background-size: 24px 24px;
   z-index: 0;
 }
@@ -1135,7 +1136,7 @@ blockquote {
 .cta-final__btn:hover {
   transform: translateY(-3px);
   background: var(--color-primary-hover);
-  box-shadow: 0 8px 30px rgba(200, 164, 97, 0.25);
+  box-shadow: 0 8px 30px rgba(211, 168, 91, 0.25);
 }
 
 .cta-final__btn:active {
@@ -1382,7 +1383,7 @@ blockquote {
 .cta-mid__btn:hover {
   transform: translateY(-3px);
   background: var(--color-primary-hover);
-  box-shadow: 0 8px 30px rgba(200, 164, 97, 0.25);
+  box-shadow: 0 8px 30px rgba(211, 168, 91, 0.25);
 }
 
 .cta-mid__btn:active {
