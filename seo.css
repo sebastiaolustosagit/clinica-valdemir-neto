@@ -1,0 +1,127 @@
+/* Shared SEO navigation and accessibility styles. */
+.gtm-noscript {
+  display: none;
+  visibility: hidden;
+}
+
+.breadcrumb {
+  position: relative;
+  z-index: 5;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem clamp(1.25rem, 4vw, 3rem);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #bbc6cc;
+}
+
+.problema__icon {
+  opacity: 1 !important;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin-right: 0.45rem;
+  opacity: 0.55;
+}
+
+.breadcrumb a,
+.seo-services a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.breadcrumb a:hover,
+.seo-services a:hover {
+  color: var(--color-primary, #d2b47b);
+}
+
+.hero__inner,
+.hero__content {
+  min-width: 0;
+}
+
+.hero__headline,
+.hero__sub {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 420px) {
+  .hero__headline {
+    font-size: clamp(2rem, 10vw, 2.35rem) !important;
+    text-wrap: balance;
+  }
+}
+
+.seo-services p {
+  margin: 0.15rem 0;
+}
+
+a.especialidades__card {
+  color: inherit;
+  text-decoration: none;
+}
+
+.seo-services .footer__link--priority {
+  color: var(--color-primary, #d2b47b);
+  font-weight: 700;
+}
+
+.footer__disclaimer {
+  opacity: 1 !important;
+}
+
+/* Lightweight replacement for the removed AOS dependency. */
+.seo-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+  will-change: opacity, transform;
+}
+
+.seo-reveal[data-aos="fade-left"] {
+  transform: translateX(20px);
+}
+
+.seo-reveal[data-aos="fade-right"] {
+  transform: translateX(-20px);
+}
+
+.seo-reveal.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+  will-change: auto;
+}
+
+@media (min-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 1.25fr 0.8fr 1fr 1.1fr 0.8fr !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .seo-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
