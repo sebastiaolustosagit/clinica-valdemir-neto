@@ -14,6 +14,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai"
 
 [[headers]]
   for = "/*.html"
@@ -44,3 +45,8 @@
   for = "/*/*.js"
   [headers.values]
     Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/404.html"
+  status = 410

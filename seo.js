@@ -64,34 +64,6 @@
     });
   }
 
-  function addFaqSchema() {
-    var items = Array.prototype.slice.call(document.querySelectorAll('.faq__item'));
-    if (!items.length) return;
-
-    var entities = items.map(function (item) {
-      var question = textContent(item.querySelector('.faq__question span:first-child'));
-      var answer = textContent(item.querySelector('.faq__answer'));
-      if (!question || !answer) return null;
-      return {
-        '@type': 'Question',
-        name: question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: answer
-        }
-      };
-    }).filter(Boolean);
-
-    if (!entities.length) return;
-    var script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: entities
-    });
-    document.head.appendChild(script);
-  }
 
   function initRevealAnimations() {
     var elements = Array.prototype.slice.call(document.querySelectorAll('[data-aos]'));
@@ -118,110 +90,15 @@
     });
   }
 
-  function addServiceSchema() {
-    var serviceName = document.body.getAttribute('data-service-name');
-    if (!serviceName) return;
-
-    var canonical = document.querySelector('link[rel="canonical"]');
-    var description = document.querySelector('meta[name="description"]');
-    var url = canonical ? canonical.href : window.location.href.split('#')[0];
-    var pageName = document.title;
-    var serviceDescription = description ? description.content : '';
-
-    var graph = {
-      '@context': 'https://schema.org',
-      '@graph': [
-        {
-          '@type': 'Dentist',
-          '@id': 'https://valdemirneto.online/#clinica',
-          name: 'Clínica Valdemir Neto',
-          legalName: 'M & V Odontologia LTDA',
-          url: 'https://valdemirneto.online/',
-          logo: 'https://valdemirneto.online/images/logo.png',
-          image: 'https://valdemirneto.online/images/valdemir.jpg',
-          telephone: '+55 86 99426-3194',
-          email: 'valdemir_neto@outlook.com',
-          taxID: '65.119.871/0001-74',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'Av. Lindolfo Monteiro, 813',
-            addressLocality: 'Teresina',
-            addressRegion: 'PI',
-            postalCode: '64049-490',
-            addressCountry: 'BR'
-          },
-          areaServed: { '@type': 'City', name: 'Teresina' },
-          employee: { '@id': 'https://valdemirneto.online/#dr-valdemir' }
-        },
-        {
-          '@type': 'Person',
-          '@id': 'https://valdemirneto.online/#dr-valdemir',
-          name: 'Dr. Valdemir Pereira Neto',
-          jobTitle: 'Cirurgião-Dentista Implantodontista',
-          identifier: 'CRO 3085/PI',
-          worksFor: { '@id': 'https://valdemirneto.online/#clinica' },
-          image: 'https://valdemirneto.online/images/valdemir.jpg'
-        },
-        {
-          '@type': 'Service',
-          '@id': url + '#service',
-          name: serviceName,
-          description: serviceDescription,
-          url: url,
-          provider: { '@id': 'https://valdemirneto.online/#clinica' },
-          areaServed: { '@type': 'City', name: 'Teresina' }
-        },
-        {
-          '@type': 'WebPage',
-          '@id': url + '#webpage',
-          url: url,
-          name: pageName,
-          description: serviceDescription,
-          inLanguage: 'pt-BR',
-          about: { '@id': url + '#service' },
-          author: { '@id': 'https://valdemirneto.online/#dr-valdemir' },
-          reviewedBy: { '@id': 'https://valdemirneto.online/#dr-valdemir' },
-          breadcrumb: { '@id': url + '#breadcrumb' }
-        },
-        {
-          '@type': 'BreadcrumbList',
-          '@id': url + '#breadcrumb',
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Clínica Valdemir Neto',
-              item: 'https://valdemirneto.online/'
-            },
-            {
-              '@type': 'ListItem',
-              position: 2,
-              name: serviceName,
-              item: url
-            }
-          ]
-        }
-      ]
-    };
-
-    var script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(graph);
-    document.head.appendChild(script);
-  }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
       initRevealAnimations();
       initFaqAccessibility();
-      addServiceSchema();
-      addFaqSchema();
     });
   } else {
     initRevealAnimations();
     initFaqAccessibility();
-    addServiceSchema();
-    addFaqSchema();
   }
 
   installConversionFallback();
